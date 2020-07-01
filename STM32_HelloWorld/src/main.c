@@ -49,6 +49,9 @@ int main(void)
 	initialise_monitor_handles();
 	printf("This is a HelloWorld example code\n");
 #endif
+
+	DWT->CTRL |= (1<<0);/*Enable CYCCNT in DWT_CTRL*/
+
 	/*1. Resets the RCC clock configuration to the default reset state.*/
 	/*HSI ON, PLL OFF, HSE OFF, System clock = 8 MHz, CPU clock = 8 MHZ*/
 	RCC_DeInit();
@@ -57,6 +60,11 @@ int main(void)
 	prvSetupHardware();
 	sprintf(usr_msg,"This is the Hello World application starting\n\r");
 	printmsg(usr_msg);
+
+	/*Start Recording*/
+	SEGGER_SYSVIEW_Conf();
+	SEGGER_SYSVIEW_Start();
+
 	/*3. Let's create 2 tasks, task-1 and task-2*/
 	xTaskCreate(vTask1_handler,"Task-1",configMINIMAL_STACK_SIZE,NULL,2,&xTaskHandle1);
 	xTaskCreate(vTask2_handler,"Task-2",configMINIMAL_STACK_SIZE,NULL,2,&xTaskHandle2);

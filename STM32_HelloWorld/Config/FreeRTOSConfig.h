@@ -88,6 +88,8 @@ to exclude the API function. */
 #define INCLUDE_xQueueGetMutexHolder            1
 #define INCLUDE_xTaskGetSchedulerState          1
 #define INCLUDE_eTaskGetState                   1
+#define INCLUDE_xTaskGetIdleTaskHandle 			1
+#define INCLUDE_pxTaskGetStackStart				1
 
 /* Cortex-M specific definitions. */
 #ifdef __NVIC_PRIO_BITS
@@ -127,6 +129,8 @@ header file. */
               to prevent overwriting SysTick_Handler defined within STM32Cube HAL */
 #define xPortSysTickHandler SysTick_Handler
 /* #define xPortSysTickHandler SysTick_Handler */
+
+#include "SEGGER_SYSVIEW_FreeRTOS.h"
 
 #endif /* FREERTOS_CONFIG_H */
 
