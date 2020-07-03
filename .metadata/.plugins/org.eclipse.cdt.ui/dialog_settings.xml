@@ -3,9 +3,23 @@
 	<item value="${workspace_loc:/${ProjName}/Third_Party/SEGGER/SEGGER}" key="org.eclipse.cdt.utils.ui.controls.FileListControl"/>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>
+	<section name="PDOMSearchPage">
+		<item value="false" key="caseSensitive"/>
+		<item value="227191" key="searchFlags"/>
+		<list key="previousPatterns">
+			<item value="configIDLE_TASK_NAME"/>
+			<item value="vApplicationIdleHook"/>
+		</list>
+	</section>
 	<section name="OptionalMessageDialog.hide.">
 		<item value="1" key="askReindex.detail"/>
 	</section>
 	<section name="completion_proposal_size">
+	</section>
+	<section name="org.eclipse.cdt.internal.ui.includebrowser.IBViewPart">
+		<item value="false" key="showFolders"/>
+		<item value="false" key="systemFilter"/>
+		<item value="true" key="includedBy"/>
+		<item value="false" key="inactiveFilter"/>
 	</section>
 </section>

@@ -83,7 +83,6 @@ void vTask1_handler(void* params)
 			UART_ACCESS_KEY=NOT_AVAILABLE;
 			printmsg("Hello World from task 1\n\r");
 			UART_ACCESS_KEY=AVAILABLE;
-			traceISR_EXIT_TO_SCHEDULER();
 			taskYIELD();
 		}
 	}
@@ -98,7 +97,6 @@ void vTask2_handler(void* params)
 			UART_ACCESS_KEY=NOT_AVAILABLE;
 			printmsg("Hello World from task 2\n\r");
 			UART_ACCESS_KEY=AVAILABLE;
-			traceISR_EXIT_TO_SCHEDULER();
 			taskYIELD();
 		}
 	}
