@@ -1,190 +1,46 @@
-19:23:08 **** Incremental Build of configuration Debug for project STM32_FreeRTOS_LED_and_Button ****
+01:10:49 **** Incremental Build of configuration Debug for project STM32_FreeRTOS_LED_and_Button_Int ****
 make -j4 all 
-Building file: ../src/main.c
-Building file: ../src/system_stm32f30x.c
-Building file: ../Utilities/STM32F3xx_Nucleo/stm32f3xx_nucleo.c
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Building file: ../StdPeriph_Driver/src/stm32f30x_adc.c
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/system_stm32f30x.d" -MT"src/system_stm32f30x.o" -o "src/system_stm32f30x.o" "../src/system_stm32f30x.c"
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Utilities/STM32F3xx_Nucleo/stm32f3xx_nucleo.d" -MT"Utilities/STM32F3xx_Nucleo/stm32f3xx_nucleo.o" -o "Utilities/STM32F3xx_Nucleo/stm32f3xx_nucleo.o" "../Utilities/STM32F3xx_Nucleo/stm32f3xx_nucleo.c"
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_adc.d" -MT"StdPeriph_Driver/src/stm32f30x_adc.o" -o "StdPeriph_Driver/src/stm32f30x_adc.o" "../StdPeriph_Driver/src/stm32f30x_adc.c"
-Finished building: ../src/system_stm32f30x.c
- 
-Finished building: ../Utilities/STM32F3xx_Nucleo/stm32f3xx_nucleo.c
-Building file: ../StdPeriph_Driver/src/stm32f30x_can.c
-Finished building: ../src/main.c
- 
-Invoking: MCU GCC Compiler
- 
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-Building file: ../StdPeriph_Driver/src/stm32f30x_comp.c
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_can.d" -MT"StdPeriph_Driver/src/stm32f30x_can.o" -o "StdPeriph_Driver/src/stm32f30x_can.o" "../StdPeriph_Driver/src/stm32f30x_can.c"
-Building file: ../StdPeriph_Driver/src/stm32f30x_crc.c
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_crc.d" -MT"StdPeriph_Driver/src/stm32f30x_crc.o" -o "StdPeriph_Driver/src/stm32f30x_crc.o" "../StdPeriph_Driver/src/stm32f30x_crc.c"
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_comp.d" -MT"StdPeriph_Driver/src/stm32f30x_comp.o" -o "StdPeriph_Driver/src/stm32f30x_comp.o" "../StdPeriph_Driver/src/stm32f30x_comp.c"
-Finished building: ../StdPeriph_Driver/src/stm32f30x_adc.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f30x_dac.c
-Invoking: MCU GCC Compiler
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_dac.d" -MT"StdPeriph_Driver/src/stm32f30x_dac.o" -o "StdPeriph_Driver/src/stm32f30x_dac.o" "../StdPeriph_Driver/src/stm32f30x_dac.c"
-Finished building: ../StdPeriph_Driver/src/stm32f30x_crc.c
-Finished building: ../StdPeriph_Driver/src/stm32f30x_comp.c
- 
- 
-Building file: ../StdPeriph_Driver/src/stm32f30x_dbgmcu.c
-Building file: ../StdPeriph_Driver/src/stm32f30x_dma.c
-Finished building: ../StdPeriph_Driver/src/stm32f30x_can.c
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
- 
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_dbgmcu.d" -MT"StdPeriph_Driver/src/stm32f30x_dbgmcu.o" -o "StdPeriph_Driver/src/stm32f30x_dbgmcu.o" "../StdPeriph_Driver/src/stm32f30x_dbgmcu.c"
-Building file: ../StdPeriph_Driver/src/stm32f30x_exti.c
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_dma.d" -MT"StdPeriph_Driver/src/stm32f30x_dma.o" -o "StdPeriph_Driver/src/stm32f30x_dma.o" "../StdPeriph_Driver/src/stm32f30x_dma.c"
-Invoking: MCU GCC Compiler
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_exti.d" -MT"StdPeriph_Driver/src/stm32f30x_exti.o" -o "StdPeriph_Driver/src/stm32f30x_exti.o" "../StdPeriph_Driver/src/stm32f30x_exti.c"
-Finished building: ../StdPeriph_Driver/src/stm32f30x_dac.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f30x_flash.c
-Invoking: MCU GCC Compiler
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_flash.d" -MT"StdPeriph_Driver/src/stm32f30x_flash.o" -o "StdPeriph_Driver/src/stm32f30x_flash.o" "../StdPeriph_Driver/src/stm32f30x_flash.c"
-Finished building: ../StdPeriph_Driver/src/stm32f30x_dbgmcu.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f30x_gpio.c
-Finished building: ../StdPeriph_Driver/src/stm32f30x_dma.c
-Finished building: ../StdPeriph_Driver/src/stm32f30x_exti.c
-Invoking: MCU GCC Compiler
- 
- 
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-Building file: ../StdPeriph_Driver/src/stm32f30x_hrtim.c
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_gpio.d" -MT"StdPeriph_Driver/src/stm32f30x_gpio.o" -o "StdPeriph_Driver/src/stm32f30x_gpio.o" "../StdPeriph_Driver/src/stm32f30x_gpio.c"
-Building file: ../StdPeriph_Driver/src/stm32f30x_i2c.c
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_hrtim.d" -MT"StdPeriph_Driver/src/stm32f30x_hrtim.o" -o "StdPeriph_Driver/src/stm32f30x_hrtim.o" "../StdPeriph_Driver/src/stm32f30x_hrtim.c"
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_i2c.d" -MT"StdPeriph_Driver/src/stm32f30x_i2c.o" -o "StdPeriph_Driver/src/stm32f30x_i2c.o" "../StdPeriph_Driver/src/stm32f30x_i2c.c"
-Finished building: ../StdPeriph_Driver/src/stm32f30x_flash.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f30x_iwdg.c
-Invoking: MCU GCC Compiler
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_iwdg.d" -MT"StdPeriph_Driver/src/stm32f30x_iwdg.o" -o "StdPeriph_Driver/src/stm32f30x_iwdg.o" "../StdPeriph_Driver/src/stm32f30x_iwdg.c"
-Finished building: ../StdPeriph_Driver/src/stm32f30x_gpio.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f30x_misc.c
-Invoking: MCU GCC Compiler
-Finished building: ../StdPeriph_Driver/src/stm32f30x_i2c.c
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_misc.d" -MT"StdPeriph_Driver/src/stm32f30x_misc.o" -o "StdPeriph_Driver/src/stm32f30x_misc.o" "../StdPeriph_Driver/src/stm32f30x_misc.c"
- 
-Building file: ../StdPeriph_Driver/src/stm32f30x_opamp.c
-Invoking: MCU GCC Compiler
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_opamp.d" -MT"StdPeriph_Driver/src/stm32f30x_opamp.o" -o "StdPeriph_Driver/src/stm32f30x_opamp.o" "../StdPeriph_Driver/src/stm32f30x_opamp.c"
-Finished building: ../StdPeriph_Driver/src/stm32f30x_hrtim.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f30x_pwr.c
-Invoking: MCU GCC Compiler
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_pwr.d" -MT"StdPeriph_Driver/src/stm32f30x_pwr.o" -o "StdPeriph_Driver/src/stm32f30x_pwr.o" "../StdPeriph_Driver/src/stm32f30x_pwr.c"
-Finished building: ../StdPeriph_Driver/src/stm32f30x_iwdg.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f30x_rcc.c
-Invoking: MCU GCC Compiler
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_rcc.d" -MT"StdPeriph_Driver/src/stm32f30x_rcc.o" -o "StdPeriph_Driver/src/stm32f30x_rcc.o" "../StdPeriph_Driver/src/stm32f30x_rcc.c"
-Finished building: ../StdPeriph_Driver/src/stm32f30x_misc.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f30x_rtc.c
-Invoking: MCU GCC Compiler
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_rtc.d" -MT"StdPeriph_Driver/src/stm32f30x_rtc.o" -o "StdPeriph_Driver/src/stm32f30x_rtc.o" "../StdPeriph_Driver/src/stm32f30x_rtc.c"
-Finished building: ../StdPeriph_Driver/src/stm32f30x_opamp.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f30x_spi.c
-Invoking: MCU GCC Compiler
-Finished building: ../StdPeriph_Driver/src/stm32f30x_pwr.c
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_spi.d" -MT"StdPeriph_Driver/src/stm32f30x_spi.o" -o "StdPeriph_Driver/src/stm32f30x_spi.o" "../StdPeriph_Driver/src/stm32f30x_spi.c"
- 
-Building file: ../StdPeriph_Driver/src/stm32f30x_syscfg.c
-Invoking: MCU GCC Compiler
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_syscfg.d" -MT"StdPeriph_Driver/src/stm32f30x_syscfg.o" -o "StdPeriph_Driver/src/stm32f30x_syscfg.o" "../StdPeriph_Driver/src/stm32f30x_syscfg.c"
-Finished building: ../StdPeriph_Driver/src/stm32f30x_rcc.c
- 
-Building file: ../StdPeriph_Driver/src/stm32f30x_tim.c
-Invoking: MCU GCC Compiler
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_tim.d" -MT"StdPeriph_Driver/src/stm32f30x_tim.o" -o "StdPeriph_Driver/src/stm32f30x_tim.o" "../StdPeriph_Driver/src/stm32f30x_tim.c"
-Finished building: ../StdPeriph_Driver/src/stm32f30x_spi.c
-Finished building: ../StdPeriph_Driver/src/stm32f30x_rtc.c
- 
- 
-Building file: ../StdPeriph_Driver/src/stm32f30x_usart.c
-Building file: ../StdPeriph_Driver/src/stm32f30x_wwdg.c
-Finished building: ../StdPeriph_Driver/src/stm32f30x_syscfg.c
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
- 
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_usart.d" -MT"StdPeriph_Driver/src/stm32f30x_usart.o" -o "StdPeriph_Driver/src/stm32f30x_usart.o" "../StdPeriph_Driver/src/stm32f30x_usart.c"
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"StdPeriph_Driver/src/stm32f30x_wwdg.d" -MT"StdPeriph_Driver/src/stm32f30x_wwdg.o" -o "StdPeriph_Driver/src/stm32f30x_wwdg.o" "../StdPeriph_Driver/src/stm32f30x_wwdg.c"
-Finished building: ../StdPeriph_Driver/src/stm32f30x_tim.c
- 
-Finished building: ../StdPeriph_Driver/src/stm32f30x_wwdg.c
- 
-Finished building: ../StdPeriph_Driver/src/stm32f30x_usart.c
- 
-Building target: STM32_FreeRTOS_LED_and_Button.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "STM32_FreeRTOS_LED_and_Button.elf" @"objects.list"   -lm
-Finished building target: STM32_FreeRTOS_LED_and_Button.elf
- 
-make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "STM32_FreeRTOS_LED_and_Button.elf" "STM32_FreeRTOS_LED_and_Button.bin"
-arm-none-eabi-size "STM32_FreeRTOS_LED_and_Button.elf"
-   text	   data	    bss	    dec	    hex	filename
-   8764	   1152	   3988	  13904	   3650	STM32_FreeRTOS_LED_and_Button.elf
- 
-19:39:00 **** Incremental Build of configuration Debug for project STM32_FreeRTOS_LED_and_Button ****
+make: Nothing to be done for 'all'.
+01:11:01 **** Programming project STM32_FreeRTOS_LED_and_Button_Int on chip ****
+"C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.externaltools.openocd.win32_1.23.0.201904120827\\tools\\openocd\\bin\\openocd.exe" -f stm32.flash.7451331765832999341.cfg -s "C:\\Users\\-_Alex_-\\Desktop\\RTOS course\\RTOS_workspace\\STM32_FreeRTOS_LED_and_Button_Int" -s "C:\\Ac6\\SystemWorkbench\\plugins\\fr.ac6.mcu.debug_2.5.0.201904120827\\resources\\openocd\\st_scripts" -c "program Debug/STM32_FreeRTOS_LED_and_Button_Int.elf verify " -c shutdown 
+Open On-Chip Debugger 0.10.0+dev-00021-g524e8c8 (2019-04-12-08:48)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+srst_only separate srst_nogate srst_open_drain connect_assert_srst
+Info : The selected transport took over low-level target control. The results might differ compared to plain JTAG/SWD
+adapter speed: 8000 kHz
+adapter_nsrst_delay: 100
+Info : clock speed 8000 kHz
+Info : STLINK v2.1 JTAG v37 API v2 M26 VID 0x0483 PID 0x374B
+Info : using stlink api v2
+Info : Target voltage: 3.258614
+Info : Unable to match requested speed 8000 kHz, using 4000 kHz
+Info : Stlink adapter speed set to 4000 kHz
+Info : STM32F334R8Tx.cpu: hardware has 6 breakpoints, 4 watchpoints
+Info : Listening on port 3333 for gdb connections
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x08003e08 msp: 0x20003000
+Info : Unable to match requested speed 8000 kHz, using 4000 kHz
+Info : Stlink adapter speed set to 4000 kHz
+Info : Unable to match requested speed 8000 kHz, using 4000 kHz
+adapter speed: 4000 kHz
+** Programming Started **
+auto erase enabled
+Info : device id = 0x10016438
+Info : flash size = 64kbytes
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000003a msp: 0x20003000
+wrote 18432 bytes from file Debug/STM32_FreeRTOS_LED_and_Button_Int.elf in 0.953328s (18.881 KiB/s)
+** Programming Finished **
+** Verify Started **
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20003000
+target halted due to breakpoint, current mode: Thread 
+xPSR: 0x61000000 pc: 0x2000002e msp: 0x20003000
+verified 18048 bytes in 0.222869s (79.082 KiB/s)
+** Verified OK **
+shutdown command invoked
+01:25:01 **** Incremental Build of configuration Debug for project STM32_FreeRTOS_LED_and_Button_Int ****
 make -j4 all 
-Building file: ../src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building target: STM32_FreeRTOS_LED_and_Button.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "STM32_FreeRTOS_LED_and_Button.elf" @"objects.list"   -lm
-Finished building target: STM32_FreeRTOS_LED_and_Button.elf
- 
-make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "STM32_FreeRTOS_LED_and_Button.elf" "STM32_FreeRTOS_LED_and_Button.bin"
-arm-none-eabi-size "STM32_FreeRTOS_LED_and_Button.elf"
-   text	   data	    bss	    dec	    hex	filename
-   8936	   1152	   3996	  14084	   3704	STM32_FreeRTOS_LED_and_Button.elf
- 
+make: Nothing to be done for 'all'.
