@@ -1,23 +1,6 @@
-19:39:00 **** Incremental Build of configuration Debug for project STM32_FreeRTOS_LED_and_Button ****
+19:21:01 **** Incremental Build of configuration Debug for project STM32_FreeRTOS_LED_and_Button ****
 make -j4 all 
-Building file: ../src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_LED_and_Button\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building target: STM32_FreeRTOS_LED_and_Button.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_FreeRTOS_LED_and_Button/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "STM32_FreeRTOS_LED_and_Button.elf" @"objects.list"   -lm
-Finished building target: STM32_FreeRTOS_LED_and_Button.elf
- 
-make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "STM32_FreeRTOS_LED_and_Button.elf" "STM32_FreeRTOS_LED_and_Button.bin"
-arm-none-eabi-size "STM32_FreeRTOS_LED_and_Button.elf"
-   text	   data	    bss	    dec	    hex	filename
-   8936	   1152	   3996	  14084	   3704	STM32_FreeRTOS_LED_and_Button.elf
- 
+make: Nothing to be done for 'all'.
 
-19:39:05 Build Finished (took 4s.981ms)
+19:21:02 Build Finished (took 1s.547ms)
 

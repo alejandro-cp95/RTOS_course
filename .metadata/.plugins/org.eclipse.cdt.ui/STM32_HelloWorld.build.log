@@ -1,23 +1,6 @@
-00:47:57 **** Incremental Build of configuration Debug for project STM32_HelloWorld ****
+19:20:00 **** Incremental Build of configuration Debug for project STM32_HelloWorld ****
 make -j4 all 
-Building file: ../src/main.c
-Invoking: MCU GCC Compiler
-C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_HelloWorld\Debug
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32 -DSTM32F3 -DSTM32F33 -DSTM32F334R8Tx -DNUCLEO_F334R8 -DDEBUG -DSTM32F334x8 -DUSE_STDPERIPH_DRIVER -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_HelloWorld/Utilities/STM32F3xx_Nucleo" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_HelloWorld/Third_Party/SEGGER/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_HelloWorld/Third_Party/SEGGER/OS" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_HelloWorld/Third_Party/SEGGER/SEGGER" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_HelloWorld/Config" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_HelloWorld/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_HelloWorld/Third_Party/FreeRTOS/org/Source/include" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_HelloWorld/StdPeriph_Driver/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_HelloWorld/inc" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_HelloWorld/CMSIS/device" -I"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_HelloWorld/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building target: STM32_HelloWorld.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -specs=rdimon.specs -lc -lrdimon -T"C:/Users/-_Alex_-/Desktop/RTOS course/RTOS_workspace/STM32_HelloWorld/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "STM32_HelloWorld.elf" @"objects.list"   -lm
-Finished building target: STM32_HelloWorld.elf
- 
-make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "STM32_HelloWorld.elf" "STM32_HelloWorld.bin"
-arm-none-eabi-size "STM32_HelloWorld.elf"
-   text	   data	    bss	    dec	    hex	filename
-  16228	   1160	   7956	  25344	   6300	STM32_HelloWorld.elf
- 
+make: Nothing to be done for 'all'.
 
-00:48:03 Build Finished (took 5s.594ms)
+19:20:01 Build Finished (took 1s.610ms)
 

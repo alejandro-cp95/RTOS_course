@@ -3,7 +3,7 @@
 	<section name="EXPORT_DIALOG">
 		<item value="0x200012a4" key="Start"/>
 		<item value="0x20001aa2" key="End"/>
-		<item value="C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_HelloWorld\Segger_mem_dumps\001freertos_hw.SVdat" key="File"/>
+		<item value="C:\Users\-_Alex_-\Desktop\RTOS course\RTOS_workspace\STM32_FreeRTOS_Tasks_Notify\Segger_mem_dumps\001freertos_hw.SVdat" key="File"/>
 		<item value="rawbinary" key="SELECTED_EXPORTER"/>
 		<item value="0x200012a4" key="Initial address"/>
 	</section>
