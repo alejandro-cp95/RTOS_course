@@ -1005,3 +1005,6 @@ java.lang.NullPointerException
 	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
 	at java.io.OutputStream.write(OutputStream.java:75)
 	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-07-09 14:38:45.342
+!MESSAGE Indexed 'STM32_FreeRTOS_Idle_Hook_Power_Saving' (27 sources, 84 headers) in 3.49 sec: 7,744 declarations; 28,541 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
