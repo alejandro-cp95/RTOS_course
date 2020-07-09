@@ -1,6 +1,6 @@
-19:21:01 **** Incremental Build of configuration Debug for project STM32_FreeRTOS_LED_and_Button ****
+23:09:52 **** Incremental Build of configuration Debug for project STM32_FreeRTOS_LED_and_Button ****
 make -j4 all 
 make: Nothing to be done for 'all'.
 
-19:21:02 Build Finished (took 1s.547ms)
+23:09:53 Build Finished (took 1s.640ms)
 

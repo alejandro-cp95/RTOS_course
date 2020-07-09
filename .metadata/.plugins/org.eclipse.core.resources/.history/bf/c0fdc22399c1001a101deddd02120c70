@@ -9,45 +9,52 @@
   ******************************************************************************
 */
 
-#include "stm32f30x.h"
-#include "stm32f3xx_nucleo.h"
+#include "stdio.h"
 #include "stdint.h"
-
-#include "FreeRTOS.h"
-#include "task.h"
 #include "string.h"
+#include "stm32f30x.h"
+#include "FreeRTOS.h"
+#include "FreeRTOSConfig.h"
+#include "task.h"
+#include "stm32f3xx_nucleo.h"
 
-/*Definitions*/
-#define FALSE 0
-#define TRUE 1
-#define NOT_PRESSED FALSE
-#define PRESSED TRUE
-			
+TaskHandle_t ledTaskHandle = NULL;
+TaskHandle_t buttonTaskHandle = NULL;
+
 /*Task functions prototypes*/
+void button_task_handler(void* params);
+void led_task_handler(void* params);
 static void prvSetupHardware(void);
 static void prvSetupUART(void);
 static void prvSetupGPIO(void);
 void printmsg(char* msg);
-void button_handler(void);
-void led_task_handler(void* params);
+void rtos_delay(uint32_t delay_in_ms);
 
-/*Global variables*/
-uint8_t button_status_flag=NOT_PRESSED;
+/*Global variable section*/
+char usr_msg[50];
 
 int main(void)
 {
+
 	DWT->CTRL |= (1<<0);/*Enable CYCCNT in DWT_CTRL*/
+
 	/*1. Resets the RCC clock configuration to the default reset state.*/
 	/*HSI ON, PLL OFF, HSE OFF, System clock = 8 MHz, CPU clock = 8 MHZ*/
 	RCC_DeInit();
 	/*2. Update SystemCoreClock variable according to Clock Register Values.*/
 	SystemCoreClockUpdate();
 	prvSetupHardware();
+
+	sprintf(usr_msg,"Demo \r\n");
+	printmsg(usr_msg);
+
 	/*Start Recording*/
 	SEGGER_SYSVIEW_Conf();
 	SEGGER_SYSVIEW_Start();
-	/*3. Let's create 2 tasks: LED_TASK and BUTTON_TASK*/
-	xTaskCreate(led_task_handler,"LED_TASK",configMINIMAL_STACK_SIZE,NULL,1,NULL);
+
+	/*3. Let's create 2 tasks, task-1 and task-2*/
+	xTaskCreate(led_task_handler,"LED_T",150,NULL,2,&ledTaskHandle);
+	xTaskCreate(button_task_handler,"BUTTON_T",150,NULL,2,&buttonTaskHandle);
 	/*4. Start the scheduler*/
 	vTaskStartScheduler();
 
@@ -56,26 +63,44 @@ int main(void)
 
 void led_task_handler(void* params)
 {
+	uint32_t current_notification_value=0;
 	while(1)
 	{
-		if(button_status_flag==PRESSED)
+		//Let's wait until we receive any notification event from button_task_handler
+		if(xTaskNotifyWait(0,0,&current_notification_value,portMAX_DELAY)==pdTRUE)
 		{
-			/*Turn ON the LED*/
-			GPIO_WriteBit(GPIOA,GPIO_Pin_5,Bit_SET);
+			//We received the notification, so let's toggle the LED
+			if(GPIO_ReadOutputDataBit(GPIOA, GPIO_Pin_5)==1)
+			{
+				GPIO_ResetBits(GPIOA, GPIO_Pin_5);
+			}
+			else
+			{
+				GPIO_SetBits(GPIOA, GPIO_Pin_5);
+			}
+			sprintf(usr_msg,"Notification is received. Button press count: %ld\r\n",current_notification_value);
+			printmsg(usr_msg);
 		}
-		else
-		{
-			/*Turn OFF the LED*/
-			GPIO_WriteBit(GPIOA,GPIO_Pin_5,Bit_RESET);
-		}
-		taskYIELD();
 	}
 }
 
-void button_handler(void)
+void button_task_handler(void* params)
 {
-	button_status_flag^=1;
+	while(1)
+	{
+		if(!GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13))
+		{
+			//If button is pressed
+			//Let's wait for 100ms not to notify too many times while pressed
+			rtos_delay(100);
+			GPIO_SetBits(GPIOA, GPIO_Pin_5);
+			//Let's send the notification to led_task_handler
+			xTaskNotify(ledTaskHandle,0x0,eIncrement);
+		}
+	}
 }
+
+
 
 static void prvSetupUART(void)
 {
@@ -126,7 +151,6 @@ static void prvSetupGPIO(void)
 {
 	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA,ENABLE);
 	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOC,ENABLE);
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG,ENABLE);
 
 	GPIO_InitTypeDef gpio_led_pin, gpio_button_pin;
 	gpio_led_pin.GPIO_Pin=GPIO_Pin_5;
@@ -142,27 +166,11 @@ static void prvSetupGPIO(void)
 	gpio_button_pin.GPIO_PuPd=GPIO_PuPd_NOPULL;
 	gpio_button_pin.GPIO_Speed=GPIO_Speed_Level_2;
 	GPIO_Init(GPIOC,&gpio_button_pin);
-
-	/*Interrupt configuration for the button*/
-	/*1. System configuration for exti line*/
-	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOC,EXTI_PinSource13);
-	/*2. EXTI line configuration 13, falling edge, interrupt mode*/
-	EXTI_InitTypeDef exti_init;
-	exti_init.EXTI_Line=EXTI_Line13;
-	exti_init.EXTI_Mode=EXTI_Mode_Interrupt;
-	exti_init.EXTI_Trigger=EXTI_Trigger_Falling;
-	exti_init.EXTI_LineCmd=ENABLE;
-	EXTI_Init(&exti_init);
-	/*3. NVIC settings (IRQ settings for the selected EXTI line)*/
-	NVIC_SetPriority(EXTI15_10_IRQn,5);
-	NVIC_EnableIRQ(EXTI15_10_IRQn);
 }
 
-void EXTI15_10_IRQHandler(void)
+void rtos_delay(uint32_t delay_in_ms)
 {
-	traceISR_ENTER();
-	/*1. Clear the interrupt pending bit of the EXTI line*/
-	EXTI_ClearITPendingBit(EXTI_Line13);
-	button_handler();
-	traceISR_EXIT();
+	uint32_t current_tick_count = xTaskGetTickCount();
+	uint32_t delay_in_ticks=(delay_in_ms*configTICK_RATE_HZ)/1000;
+	while(xTaskGetTickCount()<(current_tick_count+delay_in_ticks));
 }

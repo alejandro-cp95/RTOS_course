@@ -9,72 +9,100 @@
   ******************************************************************************
 */
 
-#include "stm32f30x.h"
-#include "stm32f3xx_nucleo.h"
+#include "stdio.h"
 #include "stdint.h"
-
-#include "FreeRTOS.h"
-#include "task.h"
 #include "string.h"
+#include "stm32f30x.h"
+#include "FreeRTOS.h"
+#include "FreeRTOSConfig.h"
+#include "task.h"
+#include "stm32f3xx_nucleo.h"
 
-/*Definitions*/
-#define FALSE 0
-#define TRUE 1
-#define NOT_PRESSED FALSE
-#define PRESSED TRUE
-			
+TaskHandle_t xTaskHandle1=NULL;
+TaskHandle_t xTaskHandle2=NULL;
+
 /*Task functions prototypes*/
+void vTask1_handler(void* params);
+void vTask2_handler(void* params);
+#ifdef USE_SEMIHOSTING
+/*Used for semihosting*/
+extern void initialise_monitor_handles();
+#endif
+
 static void prvSetupHardware(void);
 static void prvSetupUART(void);
-static void prvSetupGPIO(void);
-void printmsg(char* msg);
-void button_handler(void);
-void led_task_handler(void* params);
 
-/*Global variables*/
-uint8_t button_status_flag=NOT_PRESSED;
+void printmsg(char* msg);
+
+/*Macros*/
+#define TRUE 1
+#define FALSE 0
+#define AVAILABLE TRUE
+#define NOT_AVAILABLE FALSE
+
+/*Global variable section*/
+char usr_msg[250];
+uint8_t UART_ACCESS_KEY=AVAILABLE;
 
 int main(void)
 {
+#ifdef USE_SEMIHOSTING
+	initialise_monitor_handles();
+	printf("This is a HelloWorld example code\n");
+#endif
+
 	DWT->CTRL |= (1<<0);/*Enable CYCCNT in DWT_CTRL*/
+
 	/*1. Resets the RCC clock configuration to the default reset state.*/
 	/*HSI ON, PLL OFF, HSE OFF, System clock = 8 MHz, CPU clock = 8 MHZ*/
 	RCC_DeInit();
 	/*2. Update SystemCoreClock variable according to Clock Register Values.*/
 	SystemCoreClockUpdate();
 	prvSetupHardware();
+	sprintf(usr_msg,"This is the Hello World application starting\n\r");
+	printmsg(usr_msg);
+
 	/*Start Recording*/
 	SEGGER_SYSVIEW_Conf();
 	SEGGER_SYSVIEW_Start();
-	/*3. Let's create 2 tasks: LED_TASK and BUTTON_TASK*/
-	xTaskCreate(led_task_handler,"LED_TASK",configMINIMAL_STACK_SIZE,NULL,1,NULL);
+
+	/*3. Let's create 2 tasks, task-1 and task-2*/
+	xTaskCreate(vTask1_handler,"Task-1",configMINIMAL_STACK_SIZE,NULL,2,&xTaskHandle1);
+	xTaskCreate(vTask2_handler,"Task-2",configMINIMAL_STACK_SIZE,NULL,2,&xTaskHandle2);
 	/*4. Start the scheduler*/
 	vTaskStartScheduler();
 
 	for(;;);
 }
 
-void led_task_handler(void* params)
+void vTask1_handler(void* params)
 {
 	while(1)
 	{
-		if(button_status_flag==PRESSED)
+		if(UART_ACCESS_KEY==AVAILABLE)
 		{
-			/*Turn ON the LED*/
-			GPIO_WriteBit(GPIOA,GPIO_Pin_5,Bit_SET);
+			UART_ACCESS_KEY=NOT_AVAILABLE;
+			printmsg("Hello World from task 1\n\r");
+			UART_ACCESS_KEY=AVAILABLE;
+			traceISR_EXIT_TO_SCHEDULER();
+			taskYIELD();
 		}
-		else
-		{
-			/*Turn OFF the LED*/
-			GPIO_WriteBit(GPIOA,GPIO_Pin_5,Bit_RESET);
-		}
-		taskYIELD();
 	}
 }
 
-void button_handler(void)
+void vTask2_handler(void* params)
 {
-	button_status_flag^=1;
+	while(1)
+	{
+		if(UART_ACCESS_KEY==AVAILABLE)
+		{
+			UART_ACCESS_KEY=NOT_AVAILABLE;
+			printmsg("Hello World from task 2\n\r");
+			UART_ACCESS_KEY=AVAILABLE;
+			traceISR_EXIT_TO_SCHEDULER();
+			taskYIELD();
+		}
+	}
 }
 
 static void prvSetupUART(void)
@@ -109,8 +137,6 @@ static void prvSetupHardware(void)
 {
 	/*Setup UART2*/
 	prvSetupUART();
-	/*Setup LED and button*/
-	prvSetupGPIO();
 }
 
 void printmsg(char* msg)
@@ -120,49 +146,4 @@ void printmsg(char* msg)
 		while(USART_GetFlagStatus(USART2, USART_FLAG_TXE)!=SET);
 		USART_SendData(USART2, msg[i]);
 	}
-}
-
-static void prvSetupGPIO(void)
-{
-	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA,ENABLE);
-	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOC,ENABLE);
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG,ENABLE);
-
-	GPIO_InitTypeDef gpio_led_pin, gpio_button_pin;
-	gpio_led_pin.GPIO_Pin=GPIO_Pin_5;
-	gpio_led_pin.GPIO_Mode=GPIO_Mode_OUT;
-	gpio_led_pin.GPIO_OType=GPIO_OType_PP;
-	gpio_led_pin.GPIO_PuPd=GPIO_PuPd_NOPULL;
-	gpio_led_pin.GPIO_Speed=GPIO_Speed_Level_2;
-	GPIO_Init(GPIOA,&gpio_led_pin);
-
-	gpio_button_pin.GPIO_Pin=GPIO_Pin_13;
-	gpio_button_pin.GPIO_Mode=GPIO_Mode_IN;
-	gpio_button_pin.GPIO_OType=GPIO_OType_PP;
-	gpio_button_pin.GPIO_PuPd=GPIO_PuPd_NOPULL;
-	gpio_button_pin.GPIO_Speed=GPIO_Speed_Level_2;
-	GPIO_Init(GPIOC,&gpio_button_pin);
-
-	/*Interrupt configuration for the button*/
-	/*1. System configuration for exti line*/
-	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOC,EXTI_PinSource13);
-	/*2. EXTI line configuration 13, falling edge, interrupt mode*/
-	EXTI_InitTypeDef exti_init;
-	exti_init.EXTI_Line=EXTI_Line13;
-	exti_init.EXTI_Mode=EXTI_Mode_Interrupt;
-	exti_init.EXTI_Trigger=EXTI_Trigger_Falling;
-	exti_init.EXTI_LineCmd=ENABLE;
-	EXTI_Init(&exti_init);
-	/*3. NVIC settings (IRQ settings for the selected EXTI line)*/
-	NVIC_SetPriority(EXTI15_10_IRQn,5);
-	NVIC_EnableIRQ(EXTI15_10_IRQn);
-}
-
-void EXTI15_10_IRQHandler(void)
-{
-	traceISR_ENTER();
-	/*1. Clear the interrupt pending bit of the EXTI line*/
-	EXTI_ClearITPendingBit(EXTI_Line13);
-	button_handler();
-	traceISR_EXIT();
 }

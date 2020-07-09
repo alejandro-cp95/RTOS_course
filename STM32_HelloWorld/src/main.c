@@ -18,9 +18,6 @@
 #include "task.h"
 #include "stm32f3xx_nucleo.h"
 
-TaskHandle_t xTaskHandle1=NULL;
-TaskHandle_t xTaskHandle2=NULL;
-
 /*Task functions prototypes*/
 void vTask1_handler(void* params);
 void vTask2_handler(void* params);
@@ -67,8 +64,8 @@ int main(void)
 	SEGGER_SYSVIEW_Start();
 
 	/*3. Let's create 2 tasks, task-1 and task-2*/
-	xTaskCreate(vTask1_handler,"Task-1",configMINIMAL_STACK_SIZE,NULL,2,&xTaskHandle1);
-	xTaskCreate(vTask2_handler,"Task-2",configMINIMAL_STACK_SIZE,NULL,2,&xTaskHandle2);
+	xTaskCreate(vTask1_handler,"Task-1",configMINIMAL_STACK_SIZE,NULL,2,NULL);
+	xTaskCreate(vTask2_handler,"Task-2",configMINIMAL_STACK_SIZE,NULL,2,NULL);
 	/*4. Start the scheduler*/
 	vTaskStartScheduler();
 

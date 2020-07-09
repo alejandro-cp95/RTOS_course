@@ -24,10 +24,6 @@ TaskHandle_t xTaskHandle2 = NULL;
 /*Macros*/
 #define TRUE 1
 #define FALSE 0
-#define AVAILABLE TRUE
-#define NOT_AVAILABLE FALSE
-#define NOT_PRESSED FALSE
-#define PRESSED TRUE
 
 /*Task functions prototypes*/
 void toggleGPIOBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
@@ -40,14 +36,12 @@ void vTask1_handler(void* params);
 void vTask2_handler(void* params);
 
 /*Global variable section*/
-uint8_t ACCESS_KEY=AVAILABLE;
-uint8_t button_status_flag=NOT_PRESSED;
 uint8_t switch_prio=FALSE;
 char usr_msg[50];
+UBaseType_t p1,p2;
 
 int main(void)
 {
-
 	DWT->CTRL |= (1<<0);/*Enable CYCCNT in DWT_CTRL*/
 
 	/*1. Resets the RCC clock configuration to the default reset state.*/
@@ -75,7 +69,6 @@ int main(void)
 
 void vTask1_handler(void* params)
 {
-	UBaseType_t p1,p2;
 	sprintf(usr_msg,"Task_1 is running\r\n");
 	printmsg(usr_msg);
 	sprintf(usr_msg,"Task_1 priority is: %ld\r\n",uxTaskPriorityGet(xTaskHandle1));
@@ -106,7 +99,6 @@ void vTask1_handler(void* params)
 
 void vTask2_handler(void* params)
 {
-	UBaseType_t p1,p2;
 	sprintf(usr_msg,"Task_2 is running\r\n");
 	printmsg(usr_msg);
 	sprintf(usr_msg,"Task_1 priority is: %ld\r\n",uxTaskPriorityGet(xTaskHandle1));

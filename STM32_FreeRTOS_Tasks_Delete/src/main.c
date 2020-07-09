@@ -18,17 +18,6 @@
 #include "task.h"
 #include "stm32f3xx_nucleo.h"
 
-TaskHandle_t xTaskHandle1 = NULL;
-TaskHandle_t xTaskHandle2 = NULL;
-
-/*Macros*/
-#define TRUE 1
-#define FALSE 0
-#define AVAILABLE TRUE
-#define NOT_AVAILABLE FALSE
-#define NOT_PRESSED FALSE
-#define PRESSED TRUE
-
 /*Task functions prototypes*/
 void toggleGPIOBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
 static void prvSetupHardware(void);
@@ -40,8 +29,6 @@ void vTask1_handler(void* params);
 void vTask2_handler(void* params);
 
 /*Global variable section*/
-uint8_t ACCESS_KEY=AVAILABLE;
-uint8_t button_status_flag=NOT_PRESSED;
 char usr_msg[50];
 
 int main(void)
@@ -64,8 +51,8 @@ int main(void)
 	SEGGER_SYSVIEW_Start();
 
 	/*3. Let's create 2 tasks, task-1 and task-2*/
-	xTaskCreate(vTask1_handler,"TASK_1",150,NULL,1,&xTaskHandle1);
-	xTaskCreate(vTask2_handler,"TASK_2",150,NULL,2,&xTaskHandle2);
+	xTaskCreate(vTask1_handler,"TASK_1",150,NULL,1,NULL);
+	xTaskCreate(vTask2_handler,"TASK_2",150,NULL,2,NULL);
 	/*4. Start the scheduler*/
 	vTaskStartScheduler();
 

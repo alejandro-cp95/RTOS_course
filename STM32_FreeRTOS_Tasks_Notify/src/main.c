@@ -19,15 +19,6 @@
 #include "stm32f3xx_nucleo.h"
 
 TaskHandle_t ledTaskHandle = NULL;
-TaskHandle_t buttonTaskHandle = NULL;
-
-/*Macros*/
-#define TRUE 1
-#define FALSE 0
-#define AVAILABLE TRUE
-#define NOT_AVAILABLE FALSE
-#define NOT_PRESSED FALSE
-#define PRESSED TRUE
 
 /*Task functions prototypes*/
 void button_task_handler(void* params);
@@ -39,8 +30,6 @@ void printmsg(char* msg);
 void rtos_delay(uint32_t delay_in_ms);
 
 /*Global variable section*/
-uint8_t ACCESS_KEY=AVAILABLE;
-uint8_t button_status_flag=NOT_PRESSED;
 char usr_msg[50];
 
 int main(void)
@@ -64,7 +53,7 @@ int main(void)
 
 	/*3. Let's create 2 tasks, task-1 and task-2*/
 	xTaskCreate(led_task_handler,"LED_T",150,NULL,2,&ledTaskHandle);
-	xTaskCreate(button_task_handler,"BUTTON_T",150,NULL,2,&buttonTaskHandle);
+	xTaskCreate(button_task_handler,"BUTTON_T",150,NULL,2,NULL);
 	/*4. Start the scheduler*/
 	vTaskStartScheduler();
 

@@ -28,7 +28,7 @@ static void prvSetupHardware(void);
 static void prvSetupUART(void);
 static void prvSetupGPIO(void);
 void printmsg(char* msg);
-void button_handler(void);
+void button_handler(void* params);
 void led_task_handler(void* params);
 
 /*Global variables*/
@@ -72,7 +72,7 @@ void led_task_handler(void* params)
 	}
 }
 
-void button_handler(void)
+void button_handler(void* params)
 {
 	button_status_flag^=1;
 }
@@ -163,6 +163,6 @@ void EXTI15_10_IRQHandler(void)
 	traceISR_ENTER();
 	/*1. Clear the interrupt pending bit of the EXTI line*/
 	EXTI_ClearITPendingBit(EXTI_Line13);
-	button_handler();
+	button_handler(NULL);
 	traceISR_EXIT();
 }
