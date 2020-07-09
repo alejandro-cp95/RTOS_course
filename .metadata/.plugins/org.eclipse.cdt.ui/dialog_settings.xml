@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="${workspace_loc:/${ProjName}/Third_Party/FreeRTOS/org/Source/portable/GCC/ARM_CM4F}" key="org.eclipse.cdt.utils.ui.controls.FileListControl"/>
+	<item value="${workspace_loc:/${ProjName}/Third_Party/SEGGER/SEGGER}" key="org.eclipse.cdt.utils.ui.controls.FileListControl"/>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
 		<item value="224" key="size.height"/>
 		<item value="793" key="size.width"/>
