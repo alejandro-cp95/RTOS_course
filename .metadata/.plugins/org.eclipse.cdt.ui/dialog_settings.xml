@@ -18,7 +18,7 @@
 		</list>
 	</section>
 	<section name="OptionalMessageDialog.hide.">
-		<item value="1" key="askReindex.detail"/>
+		<item value="0" key="askReindex.detail"/>
 	</section>
 	<section name="completion_proposal_size">
 	</section>
