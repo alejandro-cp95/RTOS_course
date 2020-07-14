@@ -1681,3 +1681,40 @@ java.net.UnknownHostException: www.ac6-tools.com
 
 !ENTRY org.eclipse.core.resources 4 372 2020-07-13 16:26:07.291
 !MESSAGE Resource '/STM32_HelloWorld' is not open.
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-07-13 19:39:40.652
+!MESSAGE Indexed 'FreeRTOS_Count_Sema_Task' (27 sources, 80 headers) in 3.76 sec: 7,391 declarations; 21,360 references; 2 unresolved inclusions; 18 syntax errors; 6,400 unresolved names (18%)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-07-13 23:42:56.870
+!MESSAGE Error parsing line [Error: open failed (no matching adapter found)]
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.core.ErrorParserManager.addProblemMarker(ErrorParserManager.java:595)
+	at org.eclipse.cdt.core.ErrorParserManager.generateExternalMarker(ErrorParserManager.java:582)
+	at org.eclipse.cdt.core.errorparsers.RegexErrorPattern.recordError(RegexErrorPattern.java:318)
+	at org.eclipse.cdt.core.errorparsers.RegexErrorPattern.processLine(RegexErrorPattern.java:284)
+	at org.eclipse.cdt.core.errorparsers.RegexErrorParser.processLine(RegexErrorParser.java:148)
+	at org.eclipse.cdt.core.ErrorParserManager.processLine(ErrorParserManager.java:354)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2020-07-14 00:35:36.689
+!MESSAGE Error parsing line [Error: open failed (no matching adapter found)]
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.core.ErrorParserManager.addProblemMarker(ErrorParserManager.java:595)
+	at org.eclipse.cdt.core.ErrorParserManager.generateExternalMarker(ErrorParserManager.java:582)
+	at org.eclipse.cdt.core.errorparsers.RegexErrorPattern.recordError(RegexErrorPattern.java:318)
+	at org.eclipse.cdt.core.errorparsers.RegexErrorPattern.processLine(RegexErrorPattern.java:284)
+	at org.eclipse.cdt.core.errorparsers.RegexErrorParser.processLine(RegexErrorParser.java:148)
+	at org.eclipse.cdt.core.ErrorParserManager.processLine(ErrorParserManager.java:354)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
