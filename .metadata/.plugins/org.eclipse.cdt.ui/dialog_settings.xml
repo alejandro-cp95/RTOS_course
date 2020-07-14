@@ -18,9 +18,11 @@
 		</list>
 	</section>
 	<section name="OptionalMessageDialog.hide.">
-		<item value="0" key="askReindex.detail"/>
+		<item value="1" key="askReindex.detail"/>
 	</section>
 	<section name="completion_proposal_size">
+		<item value="221" key="contextSelector.size.y"/>
+		<item value="331" key="contextSelector.size.x"/>
 	</section>
 	<section name="org.eclipse.cdt.internal.ui.includebrowser.IBViewPart">
 		<item value="false" key="showFolders"/>
