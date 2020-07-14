@@ -1620,3 +1620,64 @@ Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING
 	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
 	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
 	... 9 more
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-07-13 14:08:35.614
+!MESSAGE Indexed 'FreeRTOS_Bin_Sema_Task' (27 sources, 31 headers) in 4.58 sec: 5,556 declarations; 18,779 references; 10 unresolved inclusions; 17 syntax errors; 6,499 unresolved names (21%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-07-13 14:12:30.664
+!MESSAGE Indexed 'FreeRTOS_Bin_Sema_Task' (40 sources, 115 headers) in 5.14 sec: 11,086 declarations; 43,233 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-07-13 14:13:52.053
+!MESSAGE Indexed 'FreeRTOS_Bin_Sema_Task' (40 sources, 115 headers) in 4.42 sec: 11,205 declarations; 43,802 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2020-07-13 14:14:26.439
+!MESSAGE Unknown Host: http://www.ac6-tools.com/Eclipse-updates/org.openstm32.system-workbench.update-site-v2/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: www.ac6-tools.com
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-07-13 16:26:07.261
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2020-07-13 16:26:07.261
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.core.resources 4 372 2020-07-13 16:26:07.271
+!MESSAGE Resource '/STM32_FreeRTOS_Idle_Hook_Power_Saving' is not open.
+
+!ENTRY org.eclipse.core.resources 4 372 2020-07-13 16:26:07.281
+!MESSAGE Resource '/STM32_FreeRTOS_LED_and_Button' is not open.
+
+!ENTRY org.eclipse.core.resources 4 372 2020-07-13 16:26:07.281
+!MESSAGE Resource '/STM32_FreeRTOS_LED_and_Button_Int' is not open.
+
+!ENTRY org.eclipse.core.resources 4 372 2020-07-13 16:26:07.281
+!MESSAGE Resource '/STM32_FreeRTOS_Queue_Processing' is not open.
+
+!ENTRY org.eclipse.core.resources 4 372 2020-07-13 16:26:07.291
+!MESSAGE Resource '/STM32_FreeRTOS_Tasks_Delete' is not open.
+
+!ENTRY org.eclipse.core.resources 4 372 2020-07-13 16:26:07.291
+!MESSAGE Resource '/STM32_FreeRTOS_Tasks_Notify' is not open.
+
+!ENTRY org.eclipse.core.resources 4 372 2020-07-13 16:26:07.291
+!MESSAGE Resource '/STM32_FreeRTOS_Tasks_Priority' is not open.
+
+!ENTRY org.eclipse.core.resources 4 372 2020-07-13 16:26:07.291
+!MESSAGE Resource '/STM32_FreeRTOS_vTaskDelay' is not open.
+
+!ENTRY org.eclipse.core.resources 4 372 2020-07-13 16:26:07.291
+!MESSAGE Resource '/STM32_HelloWorld' is not open.
