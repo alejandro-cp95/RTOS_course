@@ -201,4 +201,3 @@ void vApplicationMallocFailedHook(void)
 	sprintf(usr_msg,"Memory allocation failed\r\n");
 	printmsg(usr_msg);
 }
-

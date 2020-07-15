@@ -1,0 +1,17 @@
+[33mcea7ec4[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m Creación de proyecto: FreeRTOS Mutex Binary Semaphore. Muestra de forma simple cómo se implementa la función de exclusión mutua haciendo uso de un semáforo binario.
+[33mb646cf4[m Creación de proyecto: FreeRTOS Counting Semaphore. Se habilitan 5 semáforos dentro de una interrupción cuyo bit de interrupción se pone en pendiente cada 500ms a través de una tarea. Dichos semáforos permiten ejecutarse 5 veces consecutivas otra de las tareas.
+[33ma4fd413[m Creación de proyecto: FreeRTOS Binary Semaphore Task. Una tarea habilita a otra para que haga sus tareas, con lo cual se puede apreciar cómo se pueden sincronizar las tareas con un semáforo
+[33m33f50b7[m Creación de proyecto: FreeRTOS queue processing. Se hace uso de queues para comunicar entre tareas los comandos ingresados por medio del monitor serial y para comunicar aquellos mensajes que deben ser impresos en pantalla
+[33mc203084[m Creación de proyecto: FreeRTOS Idle Hook Power Saving. Se activa el idle hook para mandar a modo sleep a la CPU
+[33m349dc2d[m Creación de proyecto: FreeRTOS vTaskDelay. Se puede observar cómo el uso de esta función en tareas largas hace que la periodicidad no sea la esperada, y en su lugar se prefiere el uso de vTaskDelayUntil
+[33m28d4062[m Limpieza de los proyectos creados hasta el momento. Se eliminaron macros, variables y handlers inutilizados
+[33m1d56071[m Creación de proyecto: FreeRTOS tasks priority. Se tienen dos tareas de diferente prioridad y se intercambian la prioridad cuando se presiona el botón.
+[33mce7b75e[m Creación de proyecto: FreeRTOS tasks delete. Se tienen dos tareas de diferente prioridad. Primero se está constantemente ejecutando la de mayor prioridad en que se conmuta la salida del LED cada segundo. Si se presiona el botón (pulso largo) se elimina la tarea, por lo que da lugar a ejecutarse la otra tarea, con una conmutación cada 200 ms.
+[33m40fa5e6[m Creación de proyecto: FreeRTOS Tasks notify. Cuando el botón está presionado, en la tarea del botón se notifica a la tarea del LED para que en su tarea correspondiente el LED conmute. Además, se cuenta cuántas veces se ha hecho la notificación y se muestra en el monitor serial.
+[33mb471ca7[m Creación de proyecto: FreeRTOS LED and Button Int. Se enciende el LED si se está presionando el button, verificado por interrupción
+[33me8353cb[m Creación de proyecto: FreeRTOS LED and Button. Se enciende el LED si se está presionando el button, verificado por el método de poleo
+[33m36b6e65[m Obtención del archivo para analizar en System View, esta ocasión sin preempción dictada por el SysTick, es decir, scheduling cooperativo
+[33mdf95c41[m Obtención del archivo para analizar en System View
+[33m4d5c2f8[m Prevenir que al correr FreeRTOS se vaya a default handler y deje de ejecutarse
+[33md40b8e8[m Configuración de clock reseteada, setup de UART y su aplicación en dos tareas de FreeRTOS
+[33m4ba73f1[m Creación de proyecto con inclusión de elementos de FreeRTOS y ConfigFreeRTOS.h
